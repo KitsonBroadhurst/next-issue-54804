@@ -1,13 +1,6 @@
 import { getArticles } from "@/lib/articles";
 
-export default async function Library({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined };
-}) {
-  const selectedTag = searchParams?.["tag"] as string | undefined;
-
-  console.log("tag is ", selectedTag);
+export default async function Library() {
   const articles = await getArticles();
   return (
     <ul>
